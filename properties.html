@@ -40,6 +40,19 @@
         * {
             font-family: "League Spartan", sans-serif;
         }
+
+        #btn_animation {
+            opacity: 0;
+            /* hidden initially */
+            animation: fadeIn 1s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+
+        @keyframes fadeIn {
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -315,16 +328,18 @@
             </div>
         </div>
     </footer>
-    <div class="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-1.5">
+    <div class="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-1.5" id="btn_animation">
         <!-- Buy Now Button -->
-        <button
-            class="flex items-center justify-center gap-2 bg-[#2563eb] text-white p-[16px] rounded-sm shadow-md hover:bg-blue-600 transition-colors">
-            <svg xmlns="http://w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-            <span class="font-semibold text-sm tracking-wide">Buy Now</span>
-        </button>
+        <a href="https://wpastra.com/business-toolkit-pricing/?utm_source=demos&utm_medium=slide-out">
+            <button
+                class="flex items-center justify-center gap-2 bg-[#2563eb] text-white p-[16px] rounded-sm shadow-md hover:bg-blue-600 transition-colors">
+                <svg xmlns="http://w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span class="font-semibold text-sm tracking-wide">Buy Now</span>
+            </button>
+        </a>
 
         <!-- Customize Button -->
         <button
